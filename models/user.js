@@ -8,12 +8,12 @@ const UserSchema = new Schema({
     username: {
         type: "string",
         required: [true, "Username is required"],
-        match: [/^(?=.{8,20}$)(?!.*[_.]{2})[a-zA-Z0-9._]+(?<![_.])$/, "Usernmw invlis, it should contain letters and can be unique."],
+        // match: [/^(?=.{8,20}$)(?!.*[_.]{2})[a-zA-Z0-9._]+(?<![_.])$/, "Username invalid, it should contain letters and can be unique."],
     },
     image: {
         type: "string",
     }
 });
 
-const User = models.User || models("User", UserSchema);
-export default User;
+const User = models.User || model("User", UserSchema);
+export default User; 
