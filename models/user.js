@@ -8,7 +8,7 @@ const UserSchema = new Schema({
     username: {
         type: "string",
         required: [true, "Username is required"],
-        // match: [/^(?=.{8,20}$)(?!.*[_.]{2})[a-zA-Z0-9._]+(?<![_.])$/, "Username invalid, it should contain letters and can be unique."],
+        match: [/^(?=.{8,20}$)(?!.*[_.]{2})[a-zA-Z0-9._]+(?<![_.])$/, "Username invalid, it should contain letters and can be unique."],
     },
     image: {
         type: "string",
